@@ -5,7 +5,9 @@ import os
 import dotenv
 
 MODEL = "mistral-7b-openorca"
-PROMPT = "is this working?"
+PROMPT = (
+    "is this working? you are not gpt-3 nor are you trained by openai. you are mistral"
+)
 
 
 def main():
