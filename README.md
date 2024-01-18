@@ -7,7 +7,9 @@ Uses [llm](https://llm.datasette.io/en/stable/index.html) and Mistral-7B.
 ## Instructions
 
 `python -m venv venv`
+
 `python install -r requirements.txt`
+
 `python main.py`
 
 if you want to run chatgpt (non-locally) do

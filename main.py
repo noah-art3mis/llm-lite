@@ -9,9 +9,9 @@ PROMPT = "is this working?"
 
 
 def main():
-    # dotenv.load_dotenv()
+    dotenv.load_dotenv()
     model = llm.get_model(MODEL)
-    # model.key = os.environ.get("LLM_OPENAI")
+    model.key = os.environ.get("LLM_OPENAI")
     response = model.prompt(PROMPT)
     print(response.text())
 
