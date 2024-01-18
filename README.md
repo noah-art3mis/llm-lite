@@ -25,7 +25,11 @@ Uses [llm](https://llm.datasette.io/en/stable/index.html) and Mistral-7B.
 
         `python install -r requirements.txt`
 
-    1. (optional) if you want to run chatgpt (non-locally) do `echo 'LLM_OPENAI="your_api_key_here"' > .env`. now it knows your key. go into `main.py` and change the model (chatgpt is `"chatgpt"`).
+    1. (optional) if you want to run chatgpt (non-locally):
+
+        create a `.env` file with the text `LLM_OPENAI="your_api_key_here"`. substitute it for you api key. this only needs to be done once.
+
+        go into `main.py` and change the model (chatgpt is `"chatgpt"`).
 
 1. set the prompt in `main.py`
 
