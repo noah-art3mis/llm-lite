@@ -4,15 +4,14 @@ import llm
 import os
 import dotenv
 
-# MODEL = "3.5"
 MODEL = "mistral-7b-openorca"
-PROMPT = "does the api key go inside quotes insite the .env file?"
+PROMPT = "is this working?"
 
 
 def main():
-    dotenv.load_dotenv()
+    # dotenv.load_dotenv()
     model = llm.get_model(MODEL)
-    model.key = os.environ.get("LLM_OPENAI")
+    # model.key = os.environ.get("LLM_OPENAI")
     response = model.prompt(PROMPT)
     print(response.text())
 
