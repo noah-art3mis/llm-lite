@@ -1,14 +1,12 @@
 # llm-lite
 
-Minimal implementation for running a LLM locally.
-
-Uses [llm](https://llm.datasette.io/en/stable/index.html) and Mistral-7B.
+Minimal implementation for running a LLM locally using [llm](https://llm.datasette.io/en/stable/index.html). See https://simonwillison.net/2024/Apr/22/llama-3/
 
 ## Instructions
 
 1. open a terminal at the root directory of the project.
 
-    - you can do this on windows by opening explorer, clicking on the directory bar (the one that goes `C:\...` at the top of the window) and typing `cmd`. Alternatively you can open a terminal window in VSCode with the command `CTRL  + '`.
+    - you can do this on windows by opening explorer, clicking on the directory bar (the one that goes `C:\...` at the top of the window) and typing `cmd`.
 
 1. run the following commands
 
@@ -18,21 +16,22 @@ Uses [llm](https://llm.datasette.io/en/stable/index.html) and Mistral-7B.
 
     1. activate the virtual environment
 
-        `venv/Scripts/activate` (windows)
-        `source venv/bin/activate` (mac)
+        `venv/Scripts/activate` (windows)  
+        `source venv/bin/activate` (mac/linux)
 
     1. install dependencies
 
-        `python install -r requirements.txt`
+        `pip install llm`
+        `llm install llm-gpt4all`
 
-    1. (optional) if you want to run chatgpt (non-locally):
+1. set parameters in `run_llm_locally.py`
 
-        create a `.env` file with the text `LLM_OPENAI="your_api_key_here"`. substitute it for you api key. this only needs to be done once.
-
-        go into `main.py` and change the model (chatgpt is `"chatgpt"`).
-
-1. set the prompt in `main.py`
+    - `model`: the model to use
+    - `prompt`: the prompt to use
+    - `temperature`: the temperature to use
 
 1. run the program
 
-    `python main.py`
+    `python run_llm_locally.py`
+
+    - if you are running the model for the first time, it needs to be downloaded first.
